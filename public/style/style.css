@@ -1,0 +1,10 @@
+body {
+    background-color: aqua;
+}
+
+
+nav, li, ul {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
