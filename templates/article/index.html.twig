@@ -13,6 +13,7 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>Content</th>
+                <th>Image</th>
                 <th>PublishedDate</th>
                 <th>actions</th>
             </tr>
@@ -23,6 +24,7 @@
                 <td>{{ article.id }}</td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.content }}</td>
+                <td><img src= "../upload/image/{{article.image }}" alt="rien"></td>
                 <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
                 <td>
                     <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>

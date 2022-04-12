@@ -20,6 +20,10 @@
                 <td>{{ article.content }}</td>
             </tr>
             <tr>
+                <th>Image</th>
+                <td><img src= "../upload/image/{{article.image }}" alt="rien"></td>
+            </tr>
+            <tr>
                 <th>PublishedDate</th>
                 <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
             </tr>

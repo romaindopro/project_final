@@ -1,17 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Hello HomeController!
+{% endblock %}
 
 {% block body %}
+<div class="container">
+	<div class="titre">
+		<h1>Il était une feuille</h1>
+		<h2>Atelier d'illustrations personnalisées</h2>
+	</div>
+	<div class="row">
+		
+		<article class="presentation">
 
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+			<div class="prestext">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Projet_Final_3WA/Projet_Final_3WA/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Projet_Final_3WA/Projet_Final_3WA/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+				<h3>"vos plus beaux souvenirs méritent du sur mesure"</h3>
+				<p>
+					L’atelier « il était une feuille » propose aux particuliers et
+					professionnels des illustrations personnalisées sur divers formats
+					et supports. Du faire-part jusqu’à la réalisation de fresques
+					murales, ce site internet vous permettra de visualiser les
+					différentes propositions de produits destinés aux mariages, cadeau
+					de noël, anniversaire, saint Valentin ou autres événements de
+					votre vie. Ce collectif est composé d’Emilie (carnettiste de
+					voyage/peintre) et de Romain (portraitiste) qui ont décidé
+					d’allier leur expérience dans les arts graphiques et plastiques
+					pour proposer des produits uniques.
+				</p>
+			</div>
+
+		</article>
+	</div>
 </div>
 {% endblock %}
