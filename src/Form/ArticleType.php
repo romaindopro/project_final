@@ -17,7 +17,7 @@ class ArticleType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('publishedDate')
+            // ->add('publishedDate')
             ->add('photo', FileType::class, [
                 'label' => 'Image du notre document (jpeg, pdf, jpg )',
 

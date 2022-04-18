@@ -1,44 +1,44 @@
 {% extends 'base.html.twig' %}
 
 
-
-{% block title %}Article index{% endblock %}
-
-{% block body %}
-    <h1>Article index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Image</th>
-                <th>PublishedDate</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
-                <td>{{ article.title }}</td>
-                <td>{{ article.content }}</td>
-                <td><img src= "../upload/image/{{article.image }}" alt="rien"></td>
-                <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_article_new') }}">Create new</a>
+{% block title %}Le blog - Il était une feuille
 {% endblock %}
 
+{% block body %}
+	<h1>Article index</h1>
+	<article class="lesproduit">
+		<div class="container">
+			<div class="produit">
+				{% for article in articles %}
+
+					<div class="prodelement">
+						<div class="prod_img">
+							<div class="prodimg adaptive-img--cover">
+								<span>
+									<img src="../upload/image/{{article.image }}" alt="Image"/>
+								</span>
+							</div>
+							<div class="prodtext">
+								<h2>{{ article.title }}</h2>
+
+								<p>
+									{{ article.content }}
+								</p>
+								<span>
+									publié le : {{ article.publishedDate ? article.publishedDate|date('d-m-Y') : ''}}
+								</span>
+							</div>
+						</div>
+					</div>
+
+
+				{% else %}
+					<tr>
+						<td colspan="5">no records found</td>
+					</tr>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<a href="{{ path('app_article_new') }}">Create new</a>
+{% endblock %}

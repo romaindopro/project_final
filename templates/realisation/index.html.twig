@@ -1,20 +1,163 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RealisationController!{% endblock %}
+{% block title %}Les réalisations- Il était une feuille
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<section class="Mygal">
+		<div class="container">
+			<ul class="ulgal">
+				<li class="list active" data-filter="all">All</li>
+				<li class="list" data-filter="fp">Faire-part</li>
+				<li class="list" data-filter="aae">Arbre à empreintes</li>
+				<li class="list" data-filter="hb">Honeybook</li>
+				<li class="list" data-filter="pe">Peinture extension</li>
+				<li class="list" data-filter="po">peinture originale</li>
+				<li class="list" data-filter="pl">peinture live</li>
+				<li class="list" data-filter="gf">Grands formats</li>
+				<li class="list" data-filter="fm">Fresque murale</li>
+			</ul>
+			<div class="imggalery">
+				<div class="itemgalery" data-item="fp"><img src="image\fp\1_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\1_aae.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\1_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\1_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\1_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\1_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="gf"><img src="image\gf\1_gf.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\1_dm.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\2_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\2_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\2_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\2_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\2_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\2_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="gf"><img src="image\gf\2_gf.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\2_dm.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\3_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\3_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\3_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\3_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\3_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\3_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="gf"><img src="image\gf\3_gf.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\3_dm.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\4_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\4_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\4_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\4_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\4_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\4_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="gf"><img src="image\gf\4_gf.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\4_dm.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\5_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\5_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\5_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\5_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\5_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\5_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="gf"><img src="image\gf\5_gf.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\5_dm.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\6_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\6_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\6_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\6_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\6_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\6_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="gf"><img src="image\gf\6_gf.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\6_dm.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\7_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\7_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\7_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\7_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\7_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\7_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\23_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\7_dm.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\8_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\8_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\8_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\8_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\8_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\8_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\22_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\8_dm.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\9_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\9_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\9_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\9_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\9_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\9_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\21_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fm"><img src="image\dm\9_dm.jpeg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\10_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\10_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\10_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\10_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\10_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\10_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\20_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\19_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\11_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\11_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\11_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\11_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\11_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pl"><img src="image\pl\11_pl.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\18_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\17_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\12_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\12_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\12_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\12_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\12_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\13_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\16_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\15_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\19_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\13_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="hb"><img src="image\hb\13_hb.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\13_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\13_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\14_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="po"><img src="image\po\14_po.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\18_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\15_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="aae"><img src="image\aae\14_aae.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\14_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\15_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="pe"><img src="image\ext\16_ext.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\17_fp.jpg" alt="img"></div>
+				<div class="itemgalery" data-item="fp"><img src="image\fp\16_fp.jpg" alt="img"></div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+			</div>
+		</div>
+	</section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Projet_Final_3WA/Projet_Final_3WA/src/Controller/RealisationController.php'|file_link(0) }}">src/Controller/RealisationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Projet_Final_3WA/Projet_Final_3WA/templates/realisation/index.html.twig'|file_link(0) }}">templates/realisation/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<script>
+		let list = document.querySelectorAll('.list');
+let imgitem = document.querySelectorAll('.itemgalery');
+
+for (let i = 0; i < list.length; i++) {
+list[i].addEventListener('click', function () {
+for (let j = 0; j < list.length; j++) {
+list[j].classList.remove('active');
+}
+this.classList.add('active');
+let dataFilter = this.getAttribute('data-filter');
+
+for (let k = 0; k < imgitem.length; k++) {
+imgitem[k].classList.remove('active');
+imgitem[k].classList.add('hide');
+
+if (imgitem[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+imgitem[k].classList.remove('hide');
+imgitem[k].classList.add('active');
+}
+}
+})
+}
+	</script>
+	{# // <script src="{{ asset ('js/galery.js') }}" ></script> #}
+<script src="{{ asset ('js/main-alexis.js') }}" ></script>
 {% endblock %}

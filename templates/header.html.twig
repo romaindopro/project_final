@@ -1,27 +1,25 @@
 <header>
+
+	<img class="logo" src="../image/O1zdPW01.svg" alt="logo">
+
+
 	<div class="container">
 		<div class="row">
-			<a href="index.html" class="logo">
-				<div class="img">
-					<div class="adaptive-img--contain">
-						<span>
-							<img class="logo" src="../image/O1zdPW01.svg" alt="logo">
-						</span>
-					</div>
-				</div>
-				<strong>Il était une feuille</strong>
-			</a>
-			<nav>
+			<div id="nav--mobile" class="nav--mobile">
+				<button id="button" type="button" class="button">Menu</button>
+
+			</div>
+			<nav class="nav">
 				<ul>
 					<li>
 						<a href="/home">Acceuil</a>
 					</li>
 					<li>
-						<a href="/home">Produits</a>
+						<a href="/product">Produits</a>
 					</li>
-					<li>
-						<a href="/login">login</a>
-					</li>
+					<!-- <li>
+											<a href="/login">login</a>
+										</li> -->
 					<li>
 						<a href="/article">Blog</a>
 					</li>
@@ -29,25 +27,34 @@
 						<a href="/realisation">Réalisations</a>
 					</li>
 					<!-- <li class="button">
-						<a href="{{ path('app_logout') }}">logout</a>
-					</li> -->
+													<a href="{{ path('app_logout') }}">logout</a>
+												</li> -->
 				</ul>
 			</nav>
+			<div id="newNav" class="newNav">
+        <ul id="newNavUl" class="newNavUl">
+          <li>
+            <a href="/home">Acceuil</a>
+          </li>
+
+          <li>
+            <a href="/product">Produits</a>
+          </li>
+
+          <li>
+            <a href="/article">Blog</a>
+          </li>
+
+          <li>
+            <a href="/realisation">Réalisations</a>
+          </li>
+        </ul>
+      </div>
+      
 		</div>
+		<div id="shadow" class="shadow">
+
+      </div>
 	</div>
-	<!-- end of .container -->
+
 </header>
-
-
-<!-- <header>
-	<div id="nav--mobile" class="nav--mobile">
-		<button id="button" type="button" class="button">Menu</button>
-	</div>
-	<nav class="navbar">
-
-		<ul class="nav">
-
-		</ul>
-
-	</nav>
-</header> -->

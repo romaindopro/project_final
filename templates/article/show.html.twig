@@ -1,38 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article{% endblock %}
+{% block title %}Article
+{% endblock %}
 
 {% block body %}
-    <h1>Article</h1>
+	<h1>Article</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ article.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ article.content }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td><img src= "../upload/image/{{article.image }}" alt="rien"></td>
-            </tr>
-            <tr>
-                <th>PublishedDate</th>
-                <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+	{% for article in articles %}
+        <div class="cards">
+		<div class="card">
+			<div class="card__img">
+				<img src="../upload/image/{{article.image }}" alt="image_article"/>
+			</div>
 
-    <a href="{{ path('app_article_index') }}">back to list</a>
+			<span class="card__title">{{ article.title }}</span>
 
-    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+			<p class="card__text">
+				{{ article.content }}
+			</p>
+		</div>
+	</div>
+		{% else %}
+			<tr>
+				<td colspan="5">no records found</td>
+			</tr>
+	{% endfor %}
+	
+	{# <table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ article.id }}</td>
+			</tr>
+			<tr>
+				<th>Title</th>
+				<td>{{ article.title }}</td>
+			</tr>
+			<tr>
+				<th>Content</th>
+				<td>{{ article.content }}</td>
+			</tr>
+			<tr>
+				<th>Image</th>
+				<td><img src="../upload/image/{{article.image }}" alt="rien"></td>
+			</tr>
+			<tr>
+				<th>PublishedDate</th>
+				<td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
+			</tr>
+		</tbody>
+	</table> #}
 
-    {{ include('article/_delete_form.html.twig') }}
+	<a href="{{ path('app_article_index') }}">back to list</a>
+
+	<a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+
+	{{ include('article/_delete_form.html.twig') }}
 {% endblock %}
