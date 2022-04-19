@@ -129,35 +129,14 @@
 				<div class="itemgalery" data-item="pe"><img src="image\ext\16_ext.jpg" alt="img"></div>
 				<div class="itemgalery" data-item="fp"><img src="image\fp\17_fp.jpg" alt="img"></div>
 				<div class="itemgalery" data-item="fp"><img src="image\fp\16_fp.jpg" alt="img"></div>
-
+			</div>
+			<div class="popup-image">
+				<span>&times;</span>
+				<img src="image\fp\1_fp.jpg" alt="img">
 			</div>
 		</div>
 	</section>
 
-	<script>
-		let list = document.querySelectorAll('.list');
-let imgitem = document.querySelectorAll('.itemgalery');
+	
 
-for (let i = 0; i < list.length; i++) {
-list[i].addEventListener('click', function () {
-for (let j = 0; j < list.length; j++) {
-list[j].classList.remove('active');
-}
-this.classList.add('active');
-let dataFilter = this.getAttribute('data-filter');
-
-for (let k = 0; k < imgitem.length; k++) {
-imgitem[k].classList.remove('active');
-imgitem[k].classList.add('hide');
-
-if (imgitem[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
-imgitem[k].classList.remove('hide');
-imgitem[k].classList.add('active');
-}
-}
-})
-}
-	</script>
-	{# // <script src="{{ asset ('js/galery.js') }}" ></script> #}
-<script src="{{ asset ('js/main-alexis.js') }}" ></script>
 {% endblock %}

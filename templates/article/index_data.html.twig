@@ -1,44 +1,28 @@
-{% extends 'base.html.twig' %}
+{% for article in articles %}
 
-
-{% block title %}Le blog - Il était une feuille
-{% endblock %}
-
-{% block body %}
-	<h1>Article index</h1>
-	<article class="lesproduit">
-		<div class="container">
-			<div class="produit">
-				{% for article in articles %}
-
-					<div class="prodelement">
-						<div class="prod_img">
-							<div class="prodimg adaptive-img--cover">
-								<span>
-									<img src="../upload/image/{{article.image }}" alt="Image"/>
-								</span>
-							</div>
-							<div class="prodtext">
-								<h2>{{ article.title }}</h2>
-
-								<p>
-									{{ article.content }}
-								</p>
-								<span>
-									publié le : {{ article.publishedDate ? article.publishedDate|date('d-m-Y') : ''}}
-								</span>
-							</div>
-						</div>
-					</div>
-
-
-				{% else %}
-					<tr>
-						<td colspan="5">no records found</td>
-					</tr>
-				{% endfor %}
+	<div class="article">
+		
+		<div class="row">
+			<div class="imgContent">
+				<div class="articleimg adaptive-img--cover">
+					<span>
+						<img src="/upload/image/{{article.image }}" alt="Image"/>
+					</span>
+				</div>
 			</div>
+			<div class="articletext">
+				<h2>{{ article.title }}</h2>
+
+				<p>
+					{# {{ article.content|print_short_text }} #}
+					{{ article.content|smart_short_txt }}
+				</p>
+				<span>
+					publié le :
+					{{ article.publishedDate ? article.publishedDate|date('d-m-Y') : ''}}
+				</span>
+			</div>
+			
 		</div>
 	</div>
-	<a href="{{ path('app_article_new') }}">Create new</a>
-{% endblock %}
+{% endfor %}

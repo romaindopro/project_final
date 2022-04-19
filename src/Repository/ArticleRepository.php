@@ -48,19 +48,38 @@ class ArticleRepository extends ServiceEntityRepository
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function findPage($pageNb)
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
+        $daFirst = 0;
+        $Nbitem = 3;
+        $daFirst = $pageNb*$Nbitem;
+        return $this->createQueryBuilder('article')
+            ->orderBy('article.publishedDate', 'DESC')
+            ->setFirstResult($daFirst)
+            ->setMaxResults($Nbitem)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    public function countPage()
+    {
+        $nbrArticle = $this->createQueryBuilder('article')
+                            ->select('count(article.id)')
+                            ->getQuery()
+                            ->getSingleScalarResult();
+        $Nbitem = 3;
+        $nbPage = floor($nbrArticle / $Nbitem); 
+        if ($nbrArticle % $Nbitem > 0 ) {
+            $nbPage++;
+
+        }
+        return $nbPage;
+    }
+
+
+    
+    
 
     /*
     public function findOneBySomeField($value): ?Article
