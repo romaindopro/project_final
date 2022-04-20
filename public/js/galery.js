@@ -1,35 +1,60 @@
 
-    let list = document.querySelectorAll('.list');
-    let imgitem = document.querySelectorAll('.itemgalery');
+let sideMenu = document.querySelector('#side-menu');
+let sideBar = document.querySelector('.side-bar');
 
-    for (let i = 0; i < list.length; i++) {
-        list[i].addEventListener('click', function () {
-            for (let j = 0; j < list.length; j++) {
-                list[j].classList.remove('active');
-            }
-            this.classList.add('active');
-            let dataFilter = this.getAttribute('data-filter');
+sideMenu.onclick = () => {
+sideMenu.classList.toggle('fa-times');
+sideBar.classList.toggle('active');
+};
 
-            for (let k = 0; k < imgitem.length; k++) {
-                imgitem[k].classList.remove('active');
-                imgitem[k].classList.add('hide');
+let galleryImages = document.querySelectorAll('.image-container img');
+let imagePop = document.querySelector('.image-popup');
 
-                if (imgitem[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
-                    imgitem[k].classList.remove('hide');
-                    imgitem[k].classList.add('active');
-                }
-            }
-        })
-    }
+galleryImages.forEach(img => {
+img.onclick = () => {
+let imageSrc = img.getAttribute('src');
+imagePop.style.display = 'flex';
+imagePop.querySelector('img').src = imageSrc;
+};
+});
 
-document.querySelectorAll('.imggalery img').forEach(image => {
-        image.onclick = () => {
-            document.querySelector('.popup-image').style.display = 'block';
-            document.querySelector('.popup-image img').src = image.getAttribute('src');
-        }
-    })
+imagePop.onclick = () => {
+imagePop.style.display = 'none';
+};
 
-document.querySelector('.popup-image span').onclick = () => {
-        document.querySelector('.popup-image').style.display = 'none';
+document.querySelector('#search-box').oninput = () => {
+var value = document.querySelector('#search-box').value.toLowerCase();
+galleryImages.forEach(img => {
+var filter = img.getAttribute('data-search').toLowerCase();
+if (filter.indexOf(value) > -1) {
+img.style.display = 'block';
+} else {
+img.style.display = 'none';
+};
+});
+};
+
+let categoryBtn = document.querySelectorAll('.category .btn');
+
+categoryBtn.forEach(btn => {
+btn.onclick = () => {
+categoryBtn.forEach(remove => remove.classList.remove('active'));
+let dataCategory = btn.getAttribute('data-category');
+galleryImages.forEach(img => {
+var imgCat = img.getAttribute('data-item');
+if (dataCategory == 'all') {
+img.style.display = 'block';
+} else if (dataCategory == imgCat) {
+img.style.display = 'block';
+} 
+else {
+img.style.display = 'none';
 }
+});
+btn.classList.add('active');
+};
+});
+
+
+
 

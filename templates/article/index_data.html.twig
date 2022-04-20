@@ -1,28 +1,17 @@
 {% for article in articles %}
-
-	<div class="article">
-		
-		<div class="row">
-			<div class="imgContent">
-				<div class="articleimg adaptive-img--cover">
-					<span>
-						<img src="/upload/image/{{article.image }}" alt="Image"/>
-					</span>
-				</div>
-			</div>
-			<div class="articletext">
-				<h2>{{ article.title }}</h2>
-
-				<p>
-					{# {{ article.content|print_short_text }} #}
-					{{ article.content|smart_short_txt }}
-				</p>
-				<span>
-					publié le :
-					{{ article.publishedDate ? article.publishedDate|date('d-m-Y') : ''}}
-				</span>
-			</div>
+	<div class="box">
+		<div class="image">
+			<img src="/upload/image/{{article.image }}" alt="img">
+		</div>
+		<div class="content">
+			<h3>{{ article.title }}</h3>
+			<p>{{ article.content|smart_short_txt }}</p>
 			
+			<a href="book.php" class="btn">book now</a>
+			<span>
+				publié le :
+				{{ article.publishedDate ? article.publishedDate|date('d-m-Y') : ''}}
+			</span>
 		</div>
 	</div>
 {% endfor %}

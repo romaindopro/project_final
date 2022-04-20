@@ -1,60 +1,19 @@
-<header>
+{% block stylesheets %}
+	<link rel="stylesheet" href={{ asset( 'style/header.css') }} type="text/css">
+{% endblock %}
 
-	<img class="logo" src="../image/O1zdPW01.svg" alt="logo">
+<section class="header">
 
+   <a href="/home" class="logo"><img src="/image/O1zdPW01.svg" alt="logo"> Il était une feuille</a>
 
-	<div class="container">
-		<div class="row">
-			<div id="nav--mobile" class="nav--mobile">
-				<button id="button" type="button" class="button">Menu</button>
+   <nav class="navbar">
+      <a href="/home">home</a>
+      <a href="/product">produit</a>
+      <a href="/article">blog</a>
+      <a href="/realisation">galery</a>
+   </nav>
 
-			</div>
-			<nav class="nav">
-				<ul>
-					<li>
-						<a href="/home">Acceuil</a>
-					</li>
-					<li>
-						<a href="/product">Produits</a>
-					</li>
-					<!-- <li>
-											<a href="/login">login</a>
-										</li> -->
-					<li>
-						<a href="/article">Blog</a>
-					</li>
-					<li>
-						<a href="/realisation">Réalisations</a>
-					</li>
-					<!-- <li class="button">
-													<a href="{{ path('app_logout') }}">logout</a>
-												</li> -->
-				</ul>
-			</nav>
-			<div id="newNav" class="newNav">
-        <ul id="newNavUl" class="newNavUl">
-          <li>
-            <a href="/home">Acceuil</a>
-          </li>
+   <div id="menu-btn" class="fas fa-bars"></div>
 
-          <li>
-            <a href="/product">Produits</a>
-          </li>
+</section>
 
-          <li>
-            <a href="/article">Blog</a>
-          </li>
-
-          <li>
-            <a href="/realisation">Réalisations</a>
-          </li>
-        </ul>
-      </div>
-      
-		</div>
-		<div id="shadow" class="shadow">
-
-      </div>
-	</div>
-
-</header>

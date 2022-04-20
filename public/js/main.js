@@ -15,35 +15,5 @@
     });
   }
 
-// **********************hamburgermenu***************************
-
-
- const buttonNav = document.getElementById("button");
-const navMobile = document.getElementById("nav--mobile");
-const shadow = document.getElementById("shadow");
-const newNav = document.getElementById("newNav");
-const newNavUl = document.getElementById("newNavUl");
-
-const main = () => {
-  buttonNav.addEventListener("click", displayNav);
-  shadow.addEventListener("click", displayNav);
-};
-
-const displayNav = () => {
-  showOrHideNav(navMobile, "active");
-  showOrHideNav(shadow, "active");
-  showOrHideNav(newNav, "active");
-  showOrHideNav(newNavUl, "active");
-};
-
-const showOrHideNav = (element, className) => {
-  const result = element.classList.contains(className);
-
-  result ? element.classList.remove(className) : element.classList.add(className);
-};
-
-window.addEventListener("load", main);
-
-
 
 // *************************modal**************************
