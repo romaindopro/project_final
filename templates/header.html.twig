@@ -1,16 +1,23 @@
 {% block stylesheets %}
-	<link rel="stylesheet" href={{ asset( 'style/header.css') }} type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href={{ asset( 'style/header.css') }} type="text/css">
+
 {% endblock %}
 
-<section class="header">
+<section class="header" id="header">
 
-   <a href="/home" class="logo"><img src="/image/O1zdPW01.svg" alt="logo"> Il était une feuille</a>
+   <a href="/home" class="logo" id="logo"><img src="/image/O1zdPW01.svg" alt="logo"></a>
 
-   <nav class="navbar">
+   <a href="/home" class="logo" id="logo" ><h1>Il était une feuille</h1></a>
+
+   <nav class="navbar" id="navbar">
       <a href="/home">home</a>
-      <a href="/product">produit</a>
+      <a href="/product">produits</a>
       <a href="/article">blog</a>
       <a href="/realisation">galery</a>
+      <a href="/login" class="fa-solid fa-user"></a>
    </nav>
 
    <div id="menu-btn" class="fas fa-bars"></div>

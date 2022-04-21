@@ -32,7 +32,7 @@ const loadNextPage = () => {
     } = document.documentElement;
 
 
-    if (scrollTop + clientHeight >= scrollHeight - 5 &&
+    if (scrollTop + clientHeight >= scrollHeight/1.3 &&
         currentPage < nbPage - 1) {
         currentPage++;
         // alert("atteint bas de page n° "+currentPage+" / "+nbPage)

@@ -1,0 +1,158 @@
+:root {
+    --black: #2c3e50;
+    --white: #fffff;
+    --text-shadow: .3rem .3rem .9rem var(--black);
+    --box-shadow: .1rem .1rem .3rem var(--black);
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #333;
+    position: relative;
+}
+#header {
+    opacity: 0.33;
+}
+#header h1 {
+    display: none;
+}
+
+#header .navbar ul li {
+    margin: 0 2rem;
+}
+#header .navbar ul li a{
+    font-size: 1.6rem;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+}
+#header .navbar a:hover{
+    color:black;
+    z-index: 3;
+ }
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+overflow: hidden;
+    
+}
+
+#container .content  {
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+
+#container .content h1 {
+    font-size: 9rem;
+    color: var(--white);
+    font-family: 'Dancing Script', cursive;
+    text-shadow: var(--text-shadow);
+}
+#container .content h2 {
+    font-size: 7rem;
+    color: var(--white);
+    font-family: 'Dancing Script', cursive;
+    text-shadow: var(--text-shadow);
+}
+#container .content h1:hover {
+    color: var(--black);
+}
+#container .content h2:hover {
+    color: var(--black);
+}
+
+#container .content button {
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    height: 4rem;
+    width: 15rem;
+    background: var(--white);
+cursor: pointer;
+font-size: 1.8rem;
+color: var(--black);
+box-shadow: var(--box-shadow);
+margin: 16px 16px;
+
+}
+
+#container .content button:hover {
+    background: var(--white);
+    letter-spacing: .2rem;
+}
+
+#container .content .icons {
+    margin-top: 3rem;
+}
+
+#container .content .icons a {
+    font-size: 1.4rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 5rem;
+    background: var(--black);
+    text-decoration: none;
+    color: var(--white);
+    text-shadow: none;
+    box-shadow: var(--box-shadow);
+    margin: 0 .5rem;
+}
+
+#container .content .icons a:hover {
+    background: var(--white);
+    color: var(--black);
+}
+#container .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+#container .video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#container #menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:var(--black);
+    display: none;
+ }
+ @media (max-width:768px){
+
+    #container .content h1 {
+        font-size: 6rem;
+        
+    }
+    #container .content h2 {
+        font-size: 3rem;
+        
+    }
+  
+  }
+
+footer {
+    display: none;
+}

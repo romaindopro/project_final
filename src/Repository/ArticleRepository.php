@@ -76,6 +76,16 @@ class ArticleRepository extends ServiceEntityRepository
         }
         return $nbPage;
     }
+    public function findId($articleId)
+    {
+        return  $this->createQueryBuilder('article')
+                            ->select('article.id','DESC')
+                            ->setFirstResult($articleId)
+                            ->getQuery()
+                            ->getResult();
+        
+    }
+    
 
 
     

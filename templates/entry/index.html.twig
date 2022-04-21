@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EntryController!{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href={{ asset( 'style/entry.css' ) }} type="text/css">
+{% endblock %}
+{% block body %}
+
+
+
+<div class="container" id="container">
+    <div class="content">
+        <a href="/home"><h1>Il était une feuille</h1></a>
+        <a href="/home"><h2>Atelier d'illustrations</h2></a>
+        <a href="/home"><button>Entrer</button></a>
+        <a href="https://www.youtube.com/watch?v=0gkYHG7G9ZM"><button>Lire la vidéo</button></a>
+    
+        
+
+    <div class="icons">
+        <a href="https://www.facebook.com/iletaitunefeuilleArt" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="#" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/iletaitunefeuille/" target="_blank" class="fab fa-instagram"></a>
+    </div>
+</div>
+<div class="video-container">
+    <video src="\video\IEUF-2021.mp4" autoplay muted loop></video>
+</div>
+</div>
+
+
+{% endblock %}

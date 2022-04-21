@@ -1,0 +1,38 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+ .login .btn {
+     margin-top: 0;
+ }
+ 
+ [type="text"], [type="password"] {
+    width: 30%;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin: .7rem 0;
+    border: 0.1rem solid var(--black);
+    
+}
+
+@media (max-width:800px){
+    .login {
+        flex-direction: column;
+        gap: 32px;
+        width: 60%;
+        margin: 32px auto;
+    }
+
+    [type="text"], [type="password"] {
+        width: 100%;
+        
+    }
+
+    label {
+        font-size: 2rem;
+    }
+}

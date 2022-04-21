@@ -7,7 +7,7 @@
 			<h3>{{ article.title }}</h3>
 			<p>{{ article.content|smart_short_txt }}</p>
 			
-			<a href="book.php" class="btn">book now</a>
+			<a href="{{ path('app_article_show', {'id': article.id}) }}" class="btn">lire l'article</a>
 			<span>
 				publié le :
 				{{ article.publishedDate ? article.publishedDate|date('d-m-Y') : ''}}

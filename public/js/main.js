@@ -1,19 +1,36 @@
-// ************************youtube**************************
-  
-  let tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  let firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
- 
-  let player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '360',
-      width: '640',
-      videoId: '0gkYHG7G9ZM'
-    });
-  }
+const swiper = new Swiper(".reviews-slider", {
+  loop: true,
+  spaceBetween: 20,
+ autoHeight: true,
+ grabCursor: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
 
-
-// *************************modal**************************
+const swipers = new Swiper(".partners-slider", {
+  loop: true,
+  spaceBetween: 20,
+ autoHeight: true,
+ grabCursor: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});

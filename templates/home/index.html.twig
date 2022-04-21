@@ -1,70 +1,180 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href={{ asset( 'style/home.css') }} type="text/css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+{% endblock %}
 
 {% block title %}Il était une feuille
 {% endblock %}
 
 {% block body %}
-
+	<!-- about section starts  -->
 
 	<section class="about">
-		<div class="container">
-			<div class="titre">
-				<h1>Il était une feuille</h1>
-				<h2>Atelier d'illustrations personnalisées</h2>
-			</div>
-			<div class="video" id="ytplayer"></div>
-			
-			<div class="text">
-				<h3>
-					"vos plus beaux souvenirs méritent du sur mesure"
-				</h3>
-				<p>
-					L’atelier « il était une feuille » propose aux particuliers et professionnels des illustrations personnalisées sur divers formats et supports. Du faire-part jusqu’à la réalisation de fresques murales, ce site internet vous permettra de visualiser les différentes propositions de produits destinés aux mariages, cadeau de noël, anniversaire, saint Valentin ou autres événements de votre vie. Ce collectif est composé d’Emilie (carnettiste de voyage/peintre) et de Romain (portraitiste) qui ont décidé d’allier leur expérience dans les arts graphiques et plastiques pour proposer des produits uniques.
-				</p>
-			</div>
+
+		<div class="image">
+			<img src="\image\DSC_4944 copie2.jpg" alt="">
+		</div>
+
+		<div class="content">
+			<h2>Atelier d'illustrations personnalisées</h2>
+			<h3>
+				"vos plus beaux souvenirs méritent du sur mesure"
+			</h3>
+			<p>L’atelier « il était une feuille » propose aux particuliers et professionnels des illustrations personnalisées sur divers formats et supports. Du faire-part jusqu’à la réalisation de fresques murales, ce site internet vous permettra de visualiser les différentes propositions de produits destinés aux mariages, cadeau de noël, anniversaire, saint Valentin ou autres événements de votre vie.</p>
+			{# <p> Ce collectif est composé d’Emilie (carnettiste de voyage/peintre) et de Romain (portraitiste) qui ont décidé d’allier leur expérience dans les arts graphiques et plastiques pour proposer des produits uniques.</p> #}
 
 		</div>
+
 	</section>
 
-	<section class="clients">
-		<div class="container">
-			<h2>Ils nous font confiance</h2>
-			<ul class="grid">
-				<li>
-					<div class="grid__img">
-						<img src="../image/logos/logo-mdm.png" alt="annie"/>
+	<!-- about section ends -->
+
+	<!-- reviews section starts  -->
+
+	<section class="reviews">
+
+		<h1 class="heading-title">
+			Avis Clients
+		</h1>
+
+		<div class="swiper reviews-slider">
+
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide slide">
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
 					</div>
-				</li>
-				<li>
-					<div class="grid__img">
-						<img src="../image/logos/logo.png" alt="avast"/>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus facilis laudantium magnam saepe magni ullam possimus laborum voluptas, veniam ipsum officiis quae doloribus minima ut quis. Molestiae qui distinctio possimus?</p>
+					<h3>john deo</h3>
+					<span>traveler</span>
+					<img src="\image\logo.jpg" alt="">
+				</div>
+				<div class="swiper-slide slide">
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
 					</div>
-				</li>
-				<li>
-					<div class="grid__img">
-						<img src="../image/logos/logo-lamarieeencolere.png" alt="cafex"/>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus repellendus et suscipit optio similique totam aut laborum ullam sequi! In!</p>
+					<h3>john deo</h3>
+					<span>traveler</span>
+					<img src="\image\logo.jpg" alt="">
+				</div>
+				<div class="swiper-slide slide">
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
 					</div>
-				</li>
-				<li>
-					<div class="grid__img">
-						<img src="../image/logos/logo-final-marron-wilpotte.jpg.webp" alt="datum"/>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim deserunt, ab at ea iste odio placeat doloribus eum dolores tempore obcaecati, dolore esse aperiam. Excepturi ad quo distinctio, dignissimos voluptate, dolores, saepe animi eum atque sint esse ab exercitationem!</p>
+					<h3>john deo</h3>
+					<span>traveler</span>
+					<img src="\image\logo.jpg" alt="">
+				</div>
+				<div class="swiper-slide slide">
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
 					</div>
-				</li>
-				<li>
-					<div class="grid__img">
-						<img src="../image/logos/DDAY_LOGO-website-white-1.png" alt="final"/>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae cum quibusdam odio dignissimos nemo?</p>
+					<h3>john deo</h3>
+					<span>traveler</span>
+					<img src="\image\logo.jpg" alt="">
+				</div>
+				<div class="swiper-slide slide">
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
 					</div>
-				</li>
-				<li>
-					<div class="grid__img">
-						<img src="../image/logos/logo-la-tutullerie-white.png" alt="forward"/>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus facilis laudantium magnam saepe magni ullam possimus laborum voluptas, veniam ipsum officiis quae doloribus minima ut quis. Molestiae qui distinctio possimus?</p>
+					<h3>john deo</h3>
+					<span>traveler</span>
+					<img src="\image\logo.jpg" alt="">
+				</div>
+				<div class="swiper-slide slide">
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
 					</div>
-				</li>
-			</ul>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus facilis laudantium magnam saepe magni ullam possimus laborum voluptas, veniam ipsum officiis quae doloribus minima ut quis. Molestiae qui distinctio possimus?</p>
+					<h3>john deo</h3>
+					<span>traveler</span>
+					<img src="\image\logo.jpg" alt="">
+				</div>
+			</div>
 		</div>
+
 	</section>
+	<section class="partners">
 
+		<h1 class="heading-title">
+			Nos partenaires
+		</h1>
 
+		<div class="swiper partners-slider">
 
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide slide">
+					<h3>D Day</h3>
+					<span>Wedding Planner</span>
+					<a href="https://organisation-dday.com/" target="_blank" ><img src="\image\logos\DDAY_LOGO-website-white-1.png" alt="img"></a>
+				</div>
+				<div class="swiper-slide slide">
+					<h3>Mélissa Wilpotte</h3>
+					<span>Wedding Planner</span>
+					<a href="https://melissawilpotte.com/" target="_blank" ><img src="\image\logos\logo-final-marron-wilpotte.jpg.webp" alt="img"></a>
+				</div>
+				<div class="swiper-slide slide">
+					<h3>La Tutullerie</h3>
+					<span>Créatrice de robe</span>
+					<a href="https://www.latutullerie.com/" target="_blank" ><img src="\image\logos\cropped-logo-la-tutullerie-dark.png" alt="img"></a>
+				</div>
+				<div class="swiper-slide slide">
+					<h3>La Mariée En Colére</h3>
+					<span>Blogueuse</span>
+					<a href="https://lamarieeencolere.com/" target="_blank" ><img src="\image\logos\logo-lamarieeencolere.png" alt="img"></a>
+				</div>
+				<div class="swiper-slide slide">
+					<h3>Maison Du Mariage</h3>
+					<span>Salon Du Mariage</span>
+					<a href="https://www.maisondumariage.com/" target="_blank" ><img src="\image\logos\logo-mdm.png" alt="img"></a>
+				</div>
+				<div class="swiper-slide slide">
+					<h3>Trophée de l'Innovation</h3>
+					<span>Prix 2022</span>
+					<img src="\image\logos\TROPHÉE DE L'INNOVATION 2022[209].png" alt="img">
+				</div>
+				<div class="swiper-slide slide">
+					<h3>Mademoiselle L</h3>
+					<span>Wedding Planner</span>
+					<a href="https://www.lesmariagesdemademoisellel.fr/" target="_blank" ><img src="\image\logos\LOGO-MDELLELOYALWEB-long_2020_Plan-de-travail-1.png" alt="img"></a>
+				</div>
+				<div class="swiper-slide slide">
+					<h3>Mademoiselle Loyal</h3>
+					<span>Wedding Planner</span>
+					<a href="https://www.mademoiselle-loyal.com/" target="_blank" ><img src="\image\logos\logo (1).png" alt="img"></a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- swiper js link  -->
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="{{ asset ('js/main.js') }}"></script>
 
 {% endblock %}

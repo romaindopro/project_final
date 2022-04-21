@@ -43,6 +43,7 @@ class Article
     {
         return $this->id;
     }
+    
 
     public function getTitle(): ?string
     {

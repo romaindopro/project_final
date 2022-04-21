@@ -83,11 +83,14 @@ class ArticleController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_article_show', methods: ['GET'])]
-    public function show(Article $article): Response
+    public function show(Article $article, ArticleRepository $articleRepository): Response
     {
+        
         return $this->render('article/show.html.twig', [
-            'article' => $article,
+            'articles' => $articleRepository->find( $article, $lockMode = null, $lockVersion = null)
+            
         ]);
+        var_dump($article);
     }
 
     #[Route('/{id}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]

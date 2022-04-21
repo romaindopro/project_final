@@ -1,9 +1,47 @@
+{% block stylesheets %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href={{ asset( 'style/footer.css') }} type="text/css">
+{% endblock %}
+<!-- footer section  -->
 
-<footer>
-	<ul>
-		<li><a href="#">Facebook</a></li>
-		<li><a href="#">insta</a></li>
-		<li><a href="#">twitter</a></li>
-		<li><a href="#">pinterest</a></li>
-	</ul>
-</footer>
+<section class="footer">
+
+	<div class="box-container">
+
+		<div class="box">
+			<h3>newsletter</h3>
+			<p>subscribe for latest updates</p>
+			<form action="">
+				<input type="email" name="" placeholder="enter your email" id="">
+				<input type="submit" value="subscribe" class="btn">
+			</form>
+		</div>
+
+		<div class="box" id="box2">
+			<h3>quick links</h3>
+			<a href="/home">home</a>
+			<a href="/product">Produits</a>
+			<a href="/article">Blog</a>
+			<a href="/realisation">Galery</a>
+			<a href="/login">login</a>
+			<a href="/login">contact</a>
+		</div>
+
+
+		<div class="box" id="box3">
+			<h3>extra links</h3>
+			<a href="#">facebook</a>
+			<a href="#">twitter</a>
+			<a href="#">instagram</a>
+			<a href="#">linkedin</a>
+			<a href="#">pinterest</a>
+		</div>
+
+
+	</div>
+
+</section>
+
+<section class="credit">
+	created by mr. Do Romain | all rights reserved!
+</section>
