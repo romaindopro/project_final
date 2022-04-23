@@ -1,0 +1,94 @@
+/* ********************vue article seul*************** */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   overflow: hidden;
+   background-color: black;
+}
+
+canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.container {
+   margin-top: 120px;
+}
+
+.container .box-container  .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    margin: 16px;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ 
+ 
+ 
+ .container .box-container  .box:hover .image img{
+    transform: scale(1.1);
+ }
+ .container .heading-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:var(--black);
+ }
+ .container .box-container .box .image{
+    
+    overflow: hidden;
+    flex: 1 0;
+    max-height: 40rem;
+ }
+ 
+ .container .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    
+ }
+ 
+ .container .box-container .box .content{
+    padding:2rem;
+    text-align: center;
+    flex: 1 0;
+    
+ }
+ 
+ .container .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:var(--black);
+ }
+ 
+ .container .box-container .box .content p{
+    font-size: 1.5rem;
+    color:var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+ }
+ 
+ .container .box-container .box .content span{
+    font-size: 1rem;
+    color:var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+ }
+ .container .load-more{
+    text-align: center;
+    margin-top: 2rem;
+ }
+ 
+ @media (max-width:1100px) {
+    .container .box-container .box{
+        flex-direction: columcontainer;
+ 
+    }
+ }

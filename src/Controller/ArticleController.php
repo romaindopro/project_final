@@ -43,7 +43,7 @@ class ArticleController extends AbstractController
 
     
 
-    #[Route('/new', name: 'app_article_new', methods: ['GET', 'POST'])]
+    #[Route('/crud/new', name: 'app_article_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ArticleRepository $articleRepository, SluggerInterface $slugger): Response
     {
         $article = new Article();
@@ -93,7 +93,7 @@ class ArticleController extends AbstractController
         var_dump($article);
     }
 
-    #[Route('/{id}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]
+    #[Route('/crud/{id}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Article $article, ArticleRepository $articleRepository): Response
     {
         $form = $this->createForm(ArticleType::class, $article);
@@ -105,12 +105,13 @@ class ArticleController extends AbstractController
         }
 
         return $this->renderForm('article/edit.html.twig', [
-            'article' => $article,
+            'articles' => $article,
             'form' => $form,
+            
         ]);
     }
 
-    #[Route('/{id}', name: 'app_article_delete', methods: ['POST'])]
+    #[Route('/crud{id}', name: 'app_article_delete', methods: ['POST'])]
     public function delete(Request $request, Article $article, ArticleRepository $articleRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$article->getId(), $request->request->get('_token'))) {

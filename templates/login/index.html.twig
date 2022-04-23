@@ -17,4 +17,9 @@
 
         <button type="submit" class="btn">login</button>
     </form>
+<div class="crea" >
+{% if ( is_granted('ROLE_ADMIN') ) %}
+		<a href="{{ path('app_article_new') }}"> <button class="btn">Crée un nouvel article</button></a>
+	{% endif %}
+</div>
 {% endblock %}
