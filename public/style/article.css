@@ -7,17 +7,19 @@
 
 body {
    overflow: hidden;
-   background-color: black;
+   /* background-color: black; */
 }
 
-canvas {
+/* canvas {
    position: absolute;
    top: 0;
    left: 0;
-}
+} */
 
 .container {
-   margin-top: 120px;
+   margin-top: 0px;
+   max-width: 1200px;
+   margin: auto;
 }
 
 .container .box-container  .box{
@@ -26,10 +28,9 @@ canvas {
     background: var(--white);
     margin: 16px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
  }
- 
- 
  
  .container .box-container  .box:hover .image img{
     transform: scale(1.1);
@@ -42,10 +43,11 @@ canvas {
     color:var(--black);
  }
  .container .box-container .box .image{
-    
     overflow: hidden;
-    flex: 1 0;
-    max-height: 40rem;
+    /* flex: 1 0; */
+    /* max-height: 40rem; */
+    max-width: 50%;
+    margin: auto;
  }
  
  .container .box-container .box .image img{
@@ -53,7 +55,6 @@ canvas {
     width: 100%;
     object-fit: cover;
     transition: .2s linear;
-    
  }
  
  .container .box-container .box .content{
@@ -81,14 +82,18 @@ canvas {
     line-height: 2;
     padding:1rem 0;
  }
- .container .load-more{
-    text-align: center;
-    margin-top: 2rem;
- }
+ 
+ .container .box-container .crea{
+justify-content: center;
+display: flex;
+flex-direction: row;
+gap: 32px;
+padding-bottom: 32px;
+}
  
  @media (max-width:1100px) {
     .container .box-container .box{
-        flex-direction: columcontainer;
+        flex-direction: column;
  
     }
  }

@@ -25,6 +25,8 @@ class ArticleController extends AbstractController
         ]);
     }
     
+    // Fonction Pagination pour affichage en AJAX de nos pages 
+
     #[Route('/page_articles/{pageNb}', name: 'app_article_data', methods: ['GET'])]
     public function pagination(ArticleRepository $articleRepository,int $pageNb ): Response
     {
@@ -32,6 +34,8 @@ class ArticleController extends AbstractController
             'articles' => $articleRepository->findPage($pageNb),
         ]);
     }
+
+    // Fonction Count dividse le nbre d'articles par 3 puis donne le nbre de pages
 
     #[Route('/count_articles', name: 'app_count_data', methods: ['GET'])]
     public function count(ArticleRepository $articleRepository ): Response

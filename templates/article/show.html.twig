@@ -7,8 +7,9 @@
 {% endblock %}
 
 {% block body %}
-<canvas id="canvas1"></canvas>
-	<div class="container">
+	{# <canvas id="canvas1"></canvas> #}
+	<div
+		class="container">
 
 		{# <h1 class="heading-title">Article</h1> #}
 		<div class="box-container">
@@ -20,7 +21,7 @@
 					<h3>{{ articles.title }}</h3>
 					<p>{{ articles.content }}</p>
 
-					<a href="{{ path('app_article_show', {'id': articles.id}) }}" class="btn">lire l'article</a>
+					{# <a href="{{ path('app_article_show', {'id': articles.id}) }}" class="btn">lire l'article</a> #}
 					<span>
 						publié le :
 						{{ articles.publishedDate ? articles.publishedDate|date('d-m-Y') : ''}}
@@ -28,18 +29,18 @@
 				</div>
 			</div>
 			<div class="crea">
-		{% if ( is_granted('ROLE_ADMIN') ) %}
-			<a href="{{ path('app_article_edit', {'id': articles.id }) }}">
-				<button class="btn">Modifier l'article</button>
-			</a>
+				{% if ( is_granted('ROLE_ADMIN') ) %}
+					<a href="{{ path('app_article_edit', {'id': articles.id }) }}">
+						<button class="btn">Modifier l'article</button>
+					</a>
 
-			{{ include('article/_delete_form.html.twig') }}
-		{% endif %}
-	</div>
+					{{ include('article/_delete_form.html.twig') }}
+				{% endif %}
+			</div>
 		</div>
 	</div>
-	
 
-<script src="{{ asset ('js/article.js') }}"></script>
+
+	{# <script src="{{ asset ('js/article.js') }}"></script> #}
 
 {% endblock %}
