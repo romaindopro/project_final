@@ -98,21 +98,48 @@ class ArticleController extends AbstractController
     }
 
     #[Route('/crud/{id}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Article $article, ArticleRepository $articleRepository): Response
+    public function edit(Request $request, Article $article, ArticleRepository $articleRepository, SluggerInterface $slugger): Response
     {
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $articleRepository->add($article);
-            return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('article/edit.html.twig', [
+             
+            /** @var UploadedFile $eventImage */
+             $imageFile = $form->get('photo')->getData();
+ 
+             // this condition is needed because the 'eventImage' field is not required
+             // so the Image file must be processed only when a file is uploaded
+             if ($imageFile) {
+                 $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                 // this is needed to safely include the file name as part of the URL
+                 $safeFilename = $slugger->slug($originalFilename);
+                 $newFilename = $safeFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
+  
+                 // Move the file to the directory where images are stored
+                 try {
+                     $imageFile->move(
+                         $this->getParameter('images_directory'),
+                         $newFilename
+                     );
+                 } catch (FileException $e) {
+                     // ... handle exception if something happens during file upload
+                 }
+  
+                 // updates the 'eventImage' property to store the image file name
+                 // instead of its contents
+                 $article->setImage($newFilename);
+             }
+             $articleRepository->add($article);
+  
+             return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);
+         }
+  
+         return $this->renderForm('article/edit.html.twig', [
             'articles' => $article,
             'form' => $form,
-            
-        ]);
+         ]);
+          
     }
 
     #[Route('/crud{id}', name: 'app_article_delete', methods: ['POST'])]

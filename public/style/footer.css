@@ -35,39 +35,39 @@ text-align: center;
 
 }
 
-.footer .box-container .box h3 {
+.footer .box-container .box1 h3 {
     font-size: 2.2rem;
     color: var(--black);
     padding: 1rem 0;
 }
 
-.footer .box-container .box p {
+.footer .box-container .box1 p {
     font-size: 1.6rem;
     color: var(--black);
     padding-bottom: 1rem;
 }
 
-.footer .box-container .box a {
+.footer .box-container .box1 a {
     font-size: 1.4rem;
     color: var(--black);
     padding: 1rem 0;
     display: block;
 }
 
-.footer .box-container .box a:hover {
+.footer .box-container .box1 a:hover {
     color: var(--white);
 }
 
-.footer .box-container .box a:hover i {
+.footer .box-container .box1 a:hover i {
     padding-right: 2rem;
 }
 
-.footer .box-container .box a i {
+.footer .box-container .box1 a i {
     padding-right: .5rem;
     color: var(--white);
 }
 
-.footer .box-container .box form input[type="email"] {
+.footer .box-container .box1 form input[type="email"] {
     width: 80%;
     padding: 1rem 1.2rem;
     font-size: 1.6rem;
@@ -86,6 +86,11 @@ text-align: center;
 
 @media (max-width:450px){
     .footer {
+        text-align: center;
+    }
+
+    #box3 {
+        margin: auto;
         text-align: center;
     }
   }

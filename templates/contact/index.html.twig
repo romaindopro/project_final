@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	<link rel="stylesheet" href={{ asset( 'style/contact.css') }} type="text/css">
+{% endblock %}
+
+{% block title %}IEUF/Formulaire de contact{% endblock %}
+
+{% block body %}
+
+<div class="contact">
+
+{% for message in app.flashes('success') %}
+			<div class="alert ">
+				{{ message }}
+			</div>
+		{% endfor %}
+
+    <h3 class="h3">Formulaire de contact</h3>
+
+
+    
+    {{ form(form) }}
+</div>
+
+{% endblock %}

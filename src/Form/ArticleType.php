@@ -42,6 +42,7 @@ class ArticleType extends AbstractType
                         'mimeTypesMessage' => 'Please upload a valid image document',
                     ])
                 ],
+                'data_class' => null
             ]);
     }
 
