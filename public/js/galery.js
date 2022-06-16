@@ -7,6 +7,9 @@ sideMenu.classList.toggle('fa-times');
 sideBar.classList.toggle('active');
 };
 
+
+// gestion des popup des images au click
+
 let galleryImages = document.querySelectorAll('.image-container img');
 let imagePop = document.querySelector('.image-popup');
 
@@ -22,17 +25,8 @@ imagePop.onclick = () => {
 imagePop.style.display = 'none';
 };
 
-// document.querySelector('#search-box').oninput = () => {
-// var value = document.querySelector('#search-box').value.toLowerCase();
-// galleryImages.forEach(img => {
-// var filter = img.getAttribute('data-search').toLowerCase();
-// if (filter.indexOf(value) > -1) {
-// img.style.display = 'block';
-// } else {
-// img.style.display = 'none';
-// };
-// });
-// };
+// gestion de selection par categories
+
 
 let categoryBtn = document.querySelectorAll('.category .btn');
 
@@ -54,6 +48,20 @@ img.style.display = 'none';
 btn.classList.add('active');
 };
 });
+
+
+
+// document.querySelector('#search-box').oninput = () => {
+// var value = document.querySelector('#search-box').value.toLowerCase();
+// galleryImages.forEach(img => {
+// var filter = img.getAttribute('data-search').toLowerCase();
+// if (filter.indexOf(value) > -1) {
+// img.style.display = 'block';
+// } else {
+// img.style.display = 'none';
+// };
+// });
+// };
 
 
 
