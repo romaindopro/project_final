@@ -84,7 +84,7 @@ text-align: center;
     background: var(--black);
 }
 
-@media (max-width:450px){
+@media screen and (max-width:450px){
     .footer {
         text-align: center;
     }

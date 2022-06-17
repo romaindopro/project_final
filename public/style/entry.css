@@ -140,7 +140,7 @@ margin: 16px 16px;
     color:var(--black);
     display: none;
  }
- @media (max-width:768px){
+ @media screen and (max-width:768px){
 
     #container .content h1 {
         font-size: 6rem;
@@ -153,6 +153,10 @@ margin: 16px 16px;
   
   }
 
-footer {
+.footer {
     display: none;
+}
+
+.credit {
+    background: transparent;
 }

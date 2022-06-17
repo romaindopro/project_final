@@ -170,7 +170,7 @@ body{
 
 
 
-@media (max-width:1200px){
+@media screen and (max-width:1200px){
 
    .gallery{
       padding-left: 20px;
@@ -197,7 +197,7 @@ body{
 
 }
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
    .image-popup img{
       width: 100%;
@@ -205,7 +205,7 @@ body{
 
 }
 
-@media (max-width:450px){
+@media screen and (max-width:450px){
 
    #side-menu.fa-times{
       top:10px;

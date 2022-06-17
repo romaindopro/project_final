@@ -448,9 +448,9 @@ h3 {
   min-width: 250px;
   flex: 1 0;
   /* padding-bottom: 100%; */
-  min-height: 250px;
+  /* min-height: 250px; */
   /* max-height: 250px; */
-} */
+/* } */
 
 .articleimg {
 
