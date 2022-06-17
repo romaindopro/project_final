@@ -1,3 +1,5 @@
+// menu de selection de category selon ecran (hamburger galerie)
+
 
 let sideMenu = document.querySelector('#side-menu');
 let sideBar = document.querySelector('.side-bar');
@@ -51,17 +53,7 @@ btn.classList.add('active');
 
 
 
-// document.querySelector('#search-box').oninput = () => {
-// var value = document.querySelector('#search-box').value.toLowerCase();
-// galleryImages.forEach(img => {
-// var filter = img.getAttribute('data-search').toLowerCase();
-// if (filter.indexOf(value) > -1) {
-// img.style.display = 'block';
-// } else {
-// img.style.display = 'none';
-// };
-// });
-// };
+
 
 
 

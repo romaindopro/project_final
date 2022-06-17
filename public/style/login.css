@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: 4rem;
+ }
+
+ .login label {
+    font-size: 2rem;
  }
 
  .login .btn {

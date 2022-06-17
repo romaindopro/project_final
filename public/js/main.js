@@ -22,6 +22,7 @@ const swipers = new Swiper(".partners-slider", {
   spaceBetween: 20,
  autoHeight: true,
  grabCursor: true,
+ autoplay: true,
   breakpoints: {
     640: {
       slidesPerView: 1,

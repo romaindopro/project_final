@@ -22,9 +22,9 @@ body {
     position: relative;
 }
 #header {
-    opacity: 0.33;
+    display: none;
 }
-#header h1 {
+/* #header h1 {
     display: none;
 }
 
@@ -41,7 +41,7 @@ body {
 #header .navbar a:hover{
     color:black;
     z-index: 3;
- }
+ } */
 
 #container {
     height: 100vh;
@@ -156,6 +156,7 @@ margin: 16px 16px;
 .footer {
     display: none;
 }
+
 
 .credit {
     background: transparent;

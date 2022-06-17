@@ -55,7 +55,7 @@ text-align: center;
 }
 
 .footer .box-container .box1 a:hover {
-    color: var(--white);
+    color: var(--main-color);
 }
 
 .footer .box-container .box1 a:hover i {
