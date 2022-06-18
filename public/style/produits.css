@@ -4,7 +4,7 @@
     gap: 2rem;
  }
  
- .packages .box-container .box{
+ .packages .box-container  .box{
     border:var(--border);
     box-shadow: var(--box-shadow);
     background: var(--white);
@@ -39,6 +39,7 @@
  .packages .box-container .box .image{
     height: 25rem;
     overflow: hidden;
+    margin: 1rem 0 1rem 0;
  }
  
  .packages .box-container .box .image img{

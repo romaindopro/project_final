@@ -48,20 +48,8 @@ class ArticleRepository extends ServiceEntityRepository
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */
+
     
-    public function findPage($pageNb)
-    {
-        $daFirst = 0;
-        $Nbitem = 3;
-        $daFirst = $pageNb*$Nbitem;
-        return $this->createQueryBuilder('article')
-            ->orderBy('article.publishedDate', 'DESC')
-            ->setFirstResult($daFirst)
-            ->setMaxResults($Nbitem)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
     public function countPage()
     {
         $nbrArticle = $this->createQueryBuilder('article')
@@ -76,6 +64,21 @@ class ArticleRepository extends ServiceEntityRepository
         }
         return $nbPage;
     }
+
+    public function findPage($pageNb)
+    {
+        $daFirst = 0;
+        $Nbitem = 3;
+        $daFirst = $pageNb*$Nbitem;
+        return $this->createQueryBuilder('article')
+            ->orderBy('article.publishedDate', 'DESC')
+            ->setFirstResult($daFirst)
+            ->setMaxResults($Nbitem)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    
     public function findId($articleId)
     {
         return  $this->createQueryBuilder('article')
