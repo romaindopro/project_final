@@ -5,12 +5,13 @@ namespace App\Controller;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
+
 
 
 
@@ -29,16 +30,18 @@ class ContactController extends AbstractController
             $manager->persist($contact);
             $manager->flush();
 
-            $email = (new Email())
+            $email = (new TemplatedEmail())
             ->from($contact->getEmail())
             ->to('contact@romaindo.fr')
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
             ->subject('Message de contact IEUF')
             
-            ->html($contact->getMessage());
+            // ->html($contact->getMessage());
+            ->htmlTemplate('emails/contact.html.twig')
+
+    // pass variables (name => value) to the template
+        ->context([
+        'contact' => $contact
+        ]);
 
         $mailer->send($email);
 
@@ -46,6 +49,7 @@ class ContactController extends AbstractController
                 'success',
                 'Votre demande a été envoyé avec succès !'
             );
+            return $this->redirectToRoute('app_contact');
 
         }
 

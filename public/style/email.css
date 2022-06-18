@@ -1,0 +1,11 @@
+h1 {
+    font-size: 3rem;
+    color: blue;
+}
+
+.message {
+    font-size: 5rem;
+    margin: auto;
+    text-align: center;
+    padding: 2rem 4rem 2rem 4rem;
+}
