@@ -24,24 +24,7 @@ body {
 #header {
     display: none;
 }
-/* #header h1 {
-    display: none;
-}
 
-#header .navbar ul li {
-    margin: 0 2rem;
-}
-#header .navbar ul li a{
-    font-size: 1.6rem;
-    color: var(--white);
-    text-decoration: none;
-    text-shadow: var(--text-shadow);
-    text-transform: uppercase;
-}
-#header .navbar a:hover{
-    color:black;
-    z-index: 3;
- } */
 
 #container {
     height: 100vh;

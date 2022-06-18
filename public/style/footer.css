@@ -30,9 +30,17 @@
 #box2 {
 text-align: center;
 }
-#box3 {
-    text-align: right;
+#box3 h3 {
+    text-align: center;
+}
 
+.rs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rs #a {
+    font-size: 3rem;
 }
 
 .footer .box-container .box1 h3 {
