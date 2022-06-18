@@ -44,8 +44,6 @@ body {
  }
  .container .box-container .box .image{
     overflow: hidden;
-    /* flex: 1 0; */
-    /* max-height: 40rem; */
     max-width: 50%;
     margin: auto;
  }

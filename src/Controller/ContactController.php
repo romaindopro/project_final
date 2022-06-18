@@ -35,10 +35,10 @@ class ContactController extends AbstractController
             ->to('contact@romaindo.fr')
             ->subject('Message de contact IEUF')
             
-            // ->html($contact->getMessage());
+            
             ->htmlTemplate('emails/contact.html.twig')
 
-    // pass variables (name => value) to the template
+   
         ->context([
         'contact' => $contact
         ]);
@@ -52,16 +52,6 @@ class ContactController extends AbstractController
             return $this->redirectToRoute('app_contact');
 
         }
-
-            //Email
-            // $mailService->sendEmail(
-            //     $contact->getEmail(),
-            //     $contact->getSubject(),
-            //     'emails/contact.html.twig',
-            //     ['contact' => $contact]
-        
-
-            
 
         return $this->render('contact/index.html.twig', [
             'form' => $form->createView(),
